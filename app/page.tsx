@@ -22,25 +22,34 @@ export default function Home(){
           </div>
         </div>
         {/* chamada para entrar em Contatoe */}
-        <div className="flex justify-between items-center h-150 bg-[#C3AF20]">
-        
+        <div className="flex flex-row justify-between items-center h-100 bg-[#C3AF20]">
+            <div className="flex py-6 items-center justify-between">
+                      <h1 className="text-4xl text-black font-bold font-sans">ENTRE EM CONTATO</h1>
+              </div>
         </div>
 
         {/* sobre Brazcoins */}
-        <div className="flex justify-between items-center h-150 bg-[#FFFFFF]">
-
+        <div className="flex flex-row justify-between items-center h-100  bg-[#FFFFFF]">
+            <div className="flex py-6 items-center justify-between">
+                      <h1 className="text-4xl text-black font-bold font-sans">SOBRE BRAZCOINS</h1>
+            </div>
+            <div className="flex py-6 items-center justify-between">
+                      <h2 className="text-xl text-black font-bold font-sans">Vou ver e lhe aviso</h2>
+            </div>
         </div>
 
         {/* serviços prestados */}
-        <div  className="flex justify-between items-center h-150 bg-[#C3AF20]">
-
+        <div  className="flex flex-col justify-between items-center h-100 bg-[#C3AF20]">
+            <div className="flex py-6 items-center justify-between">
+                  <h1 className="text-4xl text-black font-bold font-sans">SERVIÇOS</h1>
+            </div>
         </div>
 
         {/* quem já comprou diz */}
         <div  className="flex flex-col justify-between items-center h-100 bg-[#FFFFFF]">
           
           <div className="flex py-6 items-center justify-between">
-              <h1 className="text-4xl text-black font-bold font-sans">REDES SOCIAIS</h1>
+              <h1 className="text-4xl text-black font-bold font-sans">QUEM COMPROU DIZ..</h1>
           </div>
 
           <div className="flex flex-row gap-4">
@@ -48,40 +57,39 @@ export default function Home(){
           </div>
         </div>
 
-        <div className="border-b-3 border-black flex justify-between items-start h-60 bg-[#C3AF20] px-20 py-10">
-          
+        <div className="border-b-3 border-black flex flex-col md:flex-row justify-between items-start h-auto bg-[#C3AF20] px-8 md:px-20 py-10 gap-4 md:gap-0">
+  
           {/* Sobre BrazCoins */}
-          <div className="flex flex-col w-1/3 justify-start items-start p-4">
+          <div className="flex flex-col w-full md:w-1/2 justify-start items-start text-center md:text-left p-4 md:p-6">
             <h1 className="text-2xl text-black font-bold font-sans">SOBRE BRAZCOINS</h1>              
-            <h2 className="text-base text-black font-bold">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod tincidunt id laoreet dolor.
+            <h2 className="text-base text-black font-bold text-justify leading-relaxed">
+              A BrazCoins é uma empresa inovadora e promissora que foi fundada no ano de 2022. 
+              Especializada na produção e personalização de moedas e pins, a empresa traz uma 
+              abordagem única e criativa para celebrar conquistas, reconhecimento e pertencimento.
             </h2>               
           </div>
 
           {/* Atendimento */}
-          <div className="flex flex-col w-1/3 justify-start items-start p-4">
+          <div className="flex flex-col w-full md:w-1/2 justify-center items-center text-center md:text-center p-4 md:p-6">
             <h1 className="text-2xl text-black font-bold font-sans">FALA CONOSCO</h1>              
-            <h2 className="text-base text-black font-bold">
-              Segunda a Sexta: 8h às 18h <br />
-              Sábado: 9h às 12h <br />
-              <br />
-              Entre em contato diretamente pelo Whatsapp!
+            <h2 className="text-base text-black font-bold leading-relaxed">
+              <span className="block">Segunda a Sexta: 8h às 18h</span>
+              <span className="block">Sábado: 9h às 12h</span>
+              <span className="block">Entre em contato diretamente pelo WhatsApp!</span>
             </h2>              
+         
+            <h1 className="text-2xl text-black font-bold font-sans">REDES SOCIAIS</h1>
+            <div className="flex flex-row justify-right md:justify-right items-right gap-4 p-5">
+              <img src="/whatsapp.png" alt="WhatsApp" className="w-10 h-10 md:w-12 md:h-12 justify-right items-right" />
+              <img src="/instagram.svg" alt="Instagram" className="w-10 h-10 md:w-12 md:h-12" /> 
+              <img src="/Youtube.png" alt="YouTube" className="w-10 h-10 md:w-20 md:h-12" /> 
+            </div>
           </div>
-          
-          {/* Redes Sociais */}
-          <div className="flex flex-col items-center w-1/3 justify-center items-start p-4"> 
-            <div className="flex flex-col justify-start items-start">
-              <h1 className="text-2xl text-black font-bold font-sans">REDES SOCIAIS</h1>
-            </div>
 
-            <div  className="flex flex-row items-center gap-4 p-5">
-              <img src="/whatsapp.png" alt="WhatsApp" className="w-15 h-15" />
-              <img src="/instagram.svg" alt="Instagram" className="w-15 h-15" /> 
-            </div>
 
-          </div>         
         </div>
+
+
 
         <footer className="flex justify-center items-center h-10 bg-[#C3AF20]">
           <h1 className="text-black font-bold items-center">© 2025 | Desenvolvido por Ana Caroline | Todos os direitos reservados | CNPJ: 00.000.000/0000-00 </h1>
