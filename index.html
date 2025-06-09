@@ -102,7 +102,7 @@
     </style>
 </head>
 
-<body class="text-black" style="background-color: rgb(137, 132, 107);">
+<body class="text-black" style="background-color: rgb(46, 44, 34);">
     
     <nav class="fixed top-0 left-0 w-full z-50 bg-black  text-white py-4 px-6 flex justify-between items-center">
         <div class="text-xl font-bold">
@@ -151,12 +151,12 @@
           </div>
         </div>
 
-        <hr class="border-t border-black border-b-4 mt-12 w-2/4 mx-auto">
+        <hr class="border-t border-black border-b-4 w-2/4 mx-auto">
 
     </section>      
 
     <section id="quemsomos" class="relative bg-cover bg-center py-10">
-        <div class="container mx-auto grid items-center gap-8 px-6 py-12">            
+        <div class="container mx-auto grid items-center gap-8 px-6 py-12 bg-yellow-300 rounded-2xl">            
             <p class="text-5xl font-bold mt-2 text-center">Quem Somos</p>
             <hr class="border-t border-black border-b w-80 mx-auto ">
             <p class="text-lg mt-2 text-justify">
@@ -169,57 +169,59 @@
     </section>
 
     <section id="produtos" class="relative bg-cover bg-center">
-        <h2 class="text-center text-5xl font-bold text-black mb-5">
-            Produtos
-        </h2>
-        <hr class="border-t border-black border-b w-72 mx-auto">
-        
-        <div class="container mx-auto grid md:grid-cols-2 items-start gap-10 px-6 py-12">            
-            <div class="md:pr-10">            
-                <!-- Abas -->
-                <div class="flex border-b border-black mb-8 space-x-8 text-lg font-semibold">
-                    <button onclick="showTab('moedas')" id="tab-moedas" class="pb-2 border-b-4 border-yellow-500 text-[#000000] hover:text-yellow-500">Moedas</button>
-                    <button onclick="showTab('pin')" id="tab-pin" class="pb-2 text-[#000000] hover:text-yellow-500">Pin</button>
+        <div class="container mx-auto grid items-center gap-8 px-6 py-12 bg-yellow-300 rounded-2xl">
+            <h2 class="text-center text-5xl font-bold text-black mb-5">
+                Produtos
+            </h2>
+            <hr class="border-t border-black border-b w-72 mx-auto">
+            
+            <div class="container mx-auto grid md:grid-cols-2 items-start gap-10 px-6 py-12">            
+                <div class="md:pr-10">            
+                    <!-- Abas -->
+                    <div class="flex border-b border-black mb-8 space-x-8 text-lg font-semibold">
+                        <button onclick="showTab('moedas')" id="tab-moedas" class="pb-2 border-b-4 border-yellow-500 text-[#000000] hover:text-yellow-500">Moedas</button>
+                        <button onclick="showTab('pin')" id="tab-pin" class="pb-2 text-[#000000] hover:text-yellow-500">Pin</button>
+                    </div>
+                
+                    <div id="tab-content-moeda" class="block">
+                        <p class="text-lg leading-relaxed text-justify">
+                            Brasília, capital do Brasil, é uma cidade planejada e moderna, conhecida por seu formato em avião e pela arquitetura de Lúcio Costa e Oscar Niemeyer. 
+                            Inaugurada em 1960, foi criada para integrar o território nacional e impulsionar o desenvolvimento do interior.<br>
+                            A Universidade de Brasília (UnB), fundada em 1962 por Darcy Ribeiro e Anísio Teixeira, é uma das principais instituições de ensino superior do país. 
+                            Com forte atuação em pesquisa, extensão e inovação, a UnB é referência em diversas áreas do conhecimento.</p>
+                    </div>
+                
+                    <div id="tab-content-pin" class="hidden mt-4">
+                        <p class="text-lg text-justify">                    
+                            O Departamento de Ciência da Computação (CIC) da Universidade de Brasília é referência em ensino e pesquisa na área de tecnologia. 
+                            Localizado no Instituto de Ciências Exatas, no campus Darcy Ribeiro, o CIC abriga cursos de graduação e pós-graduação, além de projetos 
+                            inovadores. É um espaço ativo e colaborativo, ideal para sediar eventos acadêmicos e tecnológicos.                    
+                        </p>
+                    </div>
                 </div>
             
-                <div id="tab-content-moeda" class="block">
-                    <p class="text-lg leading-relaxed text-justify">
-                        Brasília, capital do Brasil, é uma cidade planejada e moderna, conhecida por seu formato em avião e pela arquitetura de Lúcio Costa e Oscar Niemeyer. 
-                        Inaugurada em 1960, foi criada para integrar o território nacional e impulsionar o desenvolvimento do interior.<br>
-                        A Universidade de Brasília (UnB), fundada em 1962 por Darcy Ribeiro e Anísio Teixeira, é uma das principais instituições de ensino superior do país. 
-                        Com forte atuação em pesquisa, extensão e inovação, a UnB é referência em diversas áreas do conhecimento.</p>
-                </div>
+                <div class="relative w-full">
+                    <!-- Carrossel -->
+                    <div id="carousel-container" class="block h-80 rounded-2xl overflow-hidden shadow-lg mt-14 border border-white border-4">
+                        <img id="carousel-image" src="assets/carrosel_bsb/esplanada.jpg" class="w-full h-full object-cover transition duration-500" />
+                        <button onclick="prevImage()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white px-3 py-1 rounded-r">‹</button>
+                        <button onclick="nextImage()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white px-3 py-1 rounded-l">›</button>
+                    </div>
             
-                <div id="tab-content-pin" class="hidden mt-4">
-                    <p class="text-lg text-justify">                    
-                        O Departamento de Ciência da Computação (CIC) da Universidade de Brasília é referência em ensino e pesquisa na área de tecnologia. 
-                        Localizado no Instituto de Ciências Exatas, no campus Darcy Ribeiro, o CIC abriga cursos de graduação e pós-graduação, além de projetos 
-                        inovadores. É um espaço ativo e colaborativo, ideal para sediar eventos acadêmicos e tecnológicos.                    
-                    </p>
-                </div>
-            </div>
-        
-            <div class="relative w-full">
-                <!-- Carrossel -->
-                <div id="carousel-container" class="block h-80 rounded-2xl overflow-hidden shadow-lg mt-14">
-                    <img id="carousel-image" src="assets/carrosel_bsb/esplanada.jpg" class="w-full h-full object-cover transition duration-500" />
-                    <button onclick="prevImage()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 text-white px-3 py-1 rounded-r">‹</button>
-                    <button onclick="nextImage()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 text-white px-3 py-1 rounded-l">›</button>
-                </div>
-        
-                <!-- Mapa -->
-                <div id="map-container" class="hidden w-full mt-4 rounded-lg overflow-hidden shadow-md border border-purple-300">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.8593208549!2d-47.87162942392899!3d-15.758579622076132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3bb88f71361f%3A0x3933d293e644ad55!2zUHLDqWRpbyBkZSBDacOqbmNpYSBkYSBDb21wdXRhw6fDo28gZSBFc3RhdMOtc3RpY2EgLSBDSUMvRVNU!5e0!3m2!1spt-BR!2sbr!4v1749359698999!5m2!1spt-BR!2sbr" 
-                            width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="w-full"
-                            referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                    <!-- Mapa -->
+                    <div id="map-container" class="hidden w-full mt-4 rounded-lg overflow-hidden shadow-md border border-purple-300">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.8593208549!2d-47.87162942392899!3d-15.758579622076132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3bb88f71361f%3A0x3933d293e644ad55!2zUHLDqWRpbyBkZSBDacOqbmNpYSBkYSBDb21wdXRhw6fDo28gZSBFc3RhdMOtc3RpY2EgLSBDSUMvRVNU!5e0!3m2!1spt-BR!2sbr!4v1749359698999!5m2!1spt-BR!2sbr" 
+                                width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="w-full"
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="feedbacks" class="relative bg-cover bg-center py-10">
-        <div class="container mx-auto grid items-center gap-8 px-6 py-12">            
+        <div class="container mx-auto grid items-center gap-8 px-6 py-12 bg-yellow-300 rounded-2xl">            
             <p class="text-5xl font-bold mt-2 text-center">Feedbacks</p>
             <hr class="border-t border-black border-b w-80 mx-auto ">
 
