@@ -222,15 +222,16 @@
         <div class="container mx-auto grid items-center gap-8 px-6 py-12">            
             <p class="text-5xl font-bold mt-2 text-center">Feedbacks</p>
             <hr class="border-t border-black border-b w-80 mx-auto ">
-            <div class="relative w-full max-w-3xl mx-auto mt-14">
-                <div class="block h-60 rounded-2xl overflow-hidden shadow-lg bg-white text-black flex items-center justify-center px-6 text-center text-xl font-medium">
-                    <p id="carousel-feedback" class="transition duration-500 ease-in-out"></p>
-            
+
+            <div class="relative w-full max-w-3xl mx-auto mt-10">
+                <div class="block h-80 rounded-2xl overflow-hidden shadow-lg bg-white text-black flex items-center justify-center px-6 text-center text-xl font-medium">
+                    <p id="carousel-feedback" class="transition duration-500 ease-in-out"></p>            
                     <!-- Botões -->
                     <button onclick="prevFeedback()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 text-white px-3 py-1 rounded-r">‹</button>
                     <button onclick="nextFeedback()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 text-white px-3 py-1 rounded-l">›</button>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -316,13 +317,13 @@
         }
     
         function prevFeedback() {
-            currentIndex = (currentIndexx - 1 + feedbacks.length) % feedbacks.length;
-            showFeedback(currentIndex);
+            currentIndexx = (currentIndexx - 1 + feedbacks.length) % feedbacks.length;
+            showFeedback(currentIndexx);
         }
     
         function nextFeedback() {
-            currentIndex = (currentIndexx + 1) % feedbacks.length;
-            showFeedback(currentIndex);
+            currentIndexx = (currentIndexx + 1) % feedbacks.length;
+            showFeedback(currentIndexx);
         }
     
         // Inicializa o carrossel e autoplay
@@ -332,7 +333,7 @@
             // Muda o feedback a cada 4 segundos automaticamente
             setInterval(() => {
                 nextFeedback();
-            }, 4000);
+            }, 3000);
         });
     </script>
 
