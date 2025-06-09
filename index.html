@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrazCoins</title> 
+    <link rel="icon" type="image/png" href="assets/logo.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">  
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @media (max-width: 1024px) {
+        nav ul {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            background-color: rgba(75, 85, 99, 0.95);
+            padding: 1rem;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            display: none;
+        }
+
+        nav ul.show {
+            display: flex;
+        }
+
+        nav .menu-toggle {
+            display: block;
+            cursor: pointer;
+        }
+
+        nav ul li {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        #continenteZoom {
+            width: 100%;
+            scale: 1.1 !important;
+        }
+
+        .text-5xl {
+            font-size: 2.25rem;
+        }
+
+        .text-4xl {
+            font-size: 2rem;
+        }
+
+        .text-3xl {
+            font-size: 1.75rem;
+        }
+
+        .text-2xl {
+            font-size: 1.5rem;
+        }
+
+        .text-xl {
+            font-size: 1.25rem;
+        }
+
+        .text-lg {
+            font-size: 1rem;
+        }
+
+        .text-base {
+            font-size: 0.875rem;
+        }
+
+        .gap-44 {
+            gap: 2rem !important;
+        }
+
+        .gap-24 {
+            gap: 1.5rem !important;
+        }
+
+        .w-50 {
+            width: 60% !important;
+        }
+
+        .h-10 {
+            height: auto !important;
+        }
+
+        .h-22, .h-16, .h-12 {
+            height: auto !important;
+        }
+
+        .md\\:px-20 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+    </style>
+</head>
+
+<body class="text-black" style="background-color: rgb(137, 132, 107);">
+    
+    <nav class="fixed top-0 left-0 w-full z-50 bg-black  text-white py-4 px-6 flex justify-between items-center">
+        <div class="text-xl font-bold">
+            <a href="index.html">BrazCoins</a>
+        
+        </div>
+        <div class="menu-toggle md:hidden text-white text-2xl mr-4">
+            ☰
+        </div>
+        <ul class="hidden md:flex flex-col md:flex-row gap-4 text-white text-lg font-medium menu-list">
+            <li><a href="index.html" class="hover:text-yellow-500 transition font-bold">Home</a></li>          
+            <li><a href="#quemsomos" class="hover:text-yellow-500 transition font-bold">Quem Somos</a></li>
+            <li><a href="#produtos" class="hover:text-yellow-500 transition font-bold">Produtos</a></li>
+            <li><a href="feedbacks" class="hover:text-yellow-500 transition font-bold">Feedbacks</a></li>
+            <li><a href="https://api.whatsapp.com/message/KVZ5D7UN7UWIA1?autoload=1&app_absent=0" class="hover:text-yellow-500 transition font-bold">Contato</a></li>
+          </ul>
+          
+    </nav>
+
+    <!--BANNER-->
+    <section id="index" class="relative bg-cover bg-center" style="background-color: rgb(137, 132, 107);">
+        <div class="relative z-10 container mx-auto md:px-20 py-16 grid md:grid-cols-2 items-center justify-center text-center md:text-left gap-8">
+          <!-- Texto -->
+          <div class="md:pr-10 flex flex-col items-center md:items-start">
+            <h1 class="text-5xl md:text-6xl xl:text-6xl font-bold leading-tight">
+              <span style="color: #ecc61d;">BRAZCOINS</span><br>
+              <span style="color: #000000;">Moedas e Brindes personalizados</span>
+            </h1>
+      
+            <!-- Texto animado -->
+            <p class="mt-6 text-white font-bold text-lg md:text-xl animate-pulse">
+              🌟 Junte-se a líderes que transformam o futuro!
+            </p>
+      
+            <!-- Botão -->
+            <a href="https://api.whatsapp.com/message/KVZ5D7UN7UWIA1?autoload=1&app_absent=0"
+              class="mt-10 inline-block bg-yellow-500 hover:bg-black hover:text-yellow-500 px-8 py-4 rounded-xl font-semibold text-lg transition">
+              Faça seu Orçamento!
+            </a>
+          </div>
+      
+          <!-- Imagem -->
+          <div class="flex flex-col items-center justify-center mt-32">
+            <img id="continenteZoom" src="assets/logo.png" alt="Logo"
+              class="max-w-full w-[140%] md:w-[160%] xl:w-[180%] scale-110 md:scale-125 transition-transform duration-300 ease-in-out">
+          </div>
+        </div>
+
+        <hr class="border-t border-black border-b-4 mt-12 w-2/4 mx-auto">
+
+    </section>      
+
+    <section id="quemsomos" class="relative bg-cover bg-center py-10">
+        <div class="container mx-auto grid items-center gap-8 px-6 py-12">            
+            <p class="text-5xl font-bold mt-2 text-center">Quem Somos</p>
+            <hr class="border-t border-black border-b w-80 mx-auto ">
+            <p class="text-lg mt-2 text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.     
+            </p>
+        </div>
+    </section>
+
+    <section id="produtos" class="relative bg-cover bg-center">
+        <h2 class="text-center text-5xl font-bold text-black mb-5">
+            Produtos
+        </h2>
+        <hr class="border-t border-black border-b w-72 mx-auto">
+        
+        <div class="container mx-auto grid md:grid-cols-2 items-start gap-10 px-6 py-12">            
+            <div class="md:pr-10">            
+                <!-- Abas -->
+                <div class="flex border-b border-black mb-8 space-x-8 text-lg font-semibold">
+                    <button onclick="showTab('moedas')" id="tab-moedas" class="pb-2 border-b-4 border-yellow-500 text-[#000000] hover:text-yellow-500">Moedas</button>
+                    <button onclick="showTab('pin')" id="tab-pin" class="pb-2 text-[#000000] hover:text-yellow-500">Pin</button>
+                </div>
+            
+                <div id="tab-content-moeda" class="block">
+                    <p class="text-lg leading-relaxed text-justify">
+                        Brasília, capital do Brasil, é uma cidade planejada e moderna, conhecida por seu formato em avião e pela arquitetura de Lúcio Costa e Oscar Niemeyer. 
+                        Inaugurada em 1960, foi criada para integrar o território nacional e impulsionar o desenvolvimento do interior.<br>
+                        A Universidade de Brasília (UnB), fundada em 1962 por Darcy Ribeiro e Anísio Teixeira, é uma das principais instituições de ensino superior do país. 
+                        Com forte atuação em pesquisa, extensão e inovação, a UnB é referência em diversas áreas do conhecimento.</p>
+                </div>
+            
+                <div id="tab-content-pin" class="hidden mt-4">
+                    <p class="text-lg text-justify">                    
+                        O Departamento de Ciência da Computação (CIC) da Universidade de Brasília é referência em ensino e pesquisa na área de tecnologia. 
+                        Localizado no Instituto de Ciências Exatas, no campus Darcy Ribeiro, o CIC abriga cursos de graduação e pós-graduação, além de projetos 
+                        inovadores. É um espaço ativo e colaborativo, ideal para sediar eventos acadêmicos e tecnológicos.                    
+                    </p>
+                </div>
+            </div>
+        
+            <div class="relative w-full">
+                <!-- Carrossel -->
+                <div id="carousel-container" class="block h-80 rounded-2xl overflow-hidden shadow-lg mt-14">
+                    <img id="carousel-image" src="assets/carrosel_bsb/esplanada.jpg" class="w-full h-full object-cover transition duration-500" />
+                    <button onclick="prevImage()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 text-white px-3 py-1 rounded-r">‹</button>
+                    <button onclick="nextImage()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 text-white px-3 py-1 rounded-l">›</button>
+                </div>
+        
+                <!-- Mapa -->
+                <div id="map-container" class="hidden w-full mt-4 rounded-lg overflow-hidden shadow-md border border-purple-300">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.8593208549!2d-47.87162942392899!3d-15.758579622076132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3bb88f71361f%3A0x3933d293e644ad55!2zUHLDqWRpbyBkZSBDacOqbmNpYSBkYSBDb21wdXRhw6fDo28gZSBFc3RhdMOtc3RpY2EgLSBDSUMvRVNU!5e0!3m2!1spt-BR!2sbr!4v1749359698999!5m2!1spt-BR!2sbr" 
+                            width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="w-full"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="feedbacks" class="relative bg-cover bg-center py-10">
+        <div class="container mx-auto grid items-center gap-8 px-6 py-12">            
+            <p class="text-5xl font-bold mt-2 text-center">Feedbacks</p>
+            <hr class="border-t border-black border-b w-80 mx-auto ">
+            <div class="relative w-full max-w-3xl mx-auto mt-14">
+                <div class="block h-60 rounded-2xl overflow-hidden shadow-lg bg-white text-black flex items-center justify-center px-6 text-center text-xl font-medium">
+                    <p id="carousel-feedback" class="transition duration-500 ease-in-out"></p>
+            
+                    <!-- Botões -->
+                    <button onclick="prevFeedback()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 text-white px-3 py-1 rounded-r">‹</button>
+                    <button onclick="nextFeedback()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 text-white px-3 py-1 rounded-l">›</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer class="bg-black text-gray-200 py-10 w-full h-full">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-center md:justify-between items-center gap-10">
+        
+            <!-- Coluna 1: Logo + Data -->
+            <div class="flex flex-col items-center md:items-start">
+            <img src="assets/logo.png" alt="Logo " class="w-40 mb-3 hover:scale-110 transition-transform duration-300">
+            </div>
+        
+            <!-- Coluna 2: Redes Sociais -->
+            <div class="flex flex-col items-center">
+            <h2 class="text-xl font-semibold mb-4">SIGA NOSSAS REDES SOCIAIS</h2>
+            <div class="flex gap-6 items-center">
+                <a href="https://www.instagram.com/brazcoins/" target="_blank" aria-label="Instagram">
+                    <img src="assets/redes-sociais/Instagram.png" alt="Instagram" class="w-10 h-10 object-contain hover:scale-110 transition-transform duration-300">
+                </a>
+                </div>
+            </div>
+        
+            <!-- Coluna 3: Contato -->
+            <div class="flex flex-col items-center md:items-start">
+            <h2 class="text-xl font-semibold mb-4">CONTATO</h2>
+            <p class="text-sm mb-1">WhatsApp: <a href="https://api.whatsapp.com/message/KVZ5D7UN7UWIA1?autoload=1&app_absent=0" class="underline hover:text-yellow-500"> +55 61 8185-7276 </a></p>
+            <p class="text-sm mb-1">E-mail: <a href="mailto:coinsbraz@gmail.com" class="underline hover:text-yellow-500">coinsbraz@gmail.com</a></p>
+            </div>
+        
+        </div>
+        
+        <hr class="border-gray-700 my-8 mx-auto max-w-7xl" />
+        
+        <div class="text-center text-sm text-gray-400 px-6">
+            Copyright © 2025. Todos os Direitos Reservados. Desenvolvido por
+            <a href="https://www.linkedin.com/in/anabraz26?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="underline hover:text-purple-500 font-semibold">Ana Caroline</a>
+        </div>
+        </footer>
+    
+    <script>
+        window.addEventListener('scroll', () => {
+            const floral = document.getElementById('continenteZoom');
+            const scrollTop = window.scrollY;
+            const zoom = Math.min(1 + scrollTop / 800, 1.2); 
+            floral.style.transform = `scale(${zoom})`;
+        });
+    </script>
+   
+   <!-- carrosel das fotos moedas e pins-->
+   <script>
+        const images = ['assets/carrosel_bsb/esplanada.jpg', 'assets/carrosel_bsb/campus.jpg', 'assets/carrosel_bsb/cic.jpg'];
+        let currentIndex = 0;
+
+        function showImage(index) {
+            document.getElementById("carousel-image").src = images[index];
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+    </script>
+
+    <!-- Carrosel de feedbacks -->
+    <script>
+        const feedbacks = [
+            "⭐️⭐️⭐️⭐️⭐️ — Produto excelente! A qualidade me surpreendeu.",
+            "Entrega rápida e atendimento impecável. Recomendo muito!",
+            "Um dos melhores brindes personalizados que já comprei!",
+        ];
+        let currentIndexx = 0;
+    
+        function showFeedback(index) {
+            document.getElementById("carousel-feedback").textContent = feedbacks[index];
+        }
+    
+        function prevFeedback() {
+            currentIndex = (currentIndexx - 1 + feedbacks.length) % feedbacks.length;
+            showFeedback(currentIndex);
+        }
+    
+        function nextFeedback() {
+            currentIndex = (currentIndexx + 1) % feedbacks.length;
+            showFeedback(currentIndex);
+        }
+    
+        // Inicializa o carrossel e autoplay
+        document.addEventListener("DOMContentLoaded", () => {
+            showFeedback(currentIndexx);
+    
+            // Muda o feedback a cada 4 segundos automaticamente
+            setInterval(() => {
+                nextFeedback();
+            }, 4000);
+        });
+    </script>
+
+    <!-- Mudança nas tabs do local -->
+    <script>
+        function showTab(tab) {
+          const cidadeBtn = document.getElementById("tab-moedas");
+          const localBtn = document.getElementById("tab-pin");
+      
+          const cidadeContent = document.getElementById("tab-content-moeda");
+          const localContent = document.getElementById("tab-content-pin");
+      
+          const carousel = document.getElementById("carousel-container");
+          const map = document.getElementById("map-container");
+      
+          if (tab === "moedas") {
+            cidadeBtn.classList.add("border-b-4", "border-yellow-500");
+            localBtn.classList.remove("border-b-4", "border-yellow-500");
+      
+            cidadeContent.classList.remove("hidden");
+            localContent.classList.add("hidden");
+      
+            carousel.classList.remove("hidden");
+            map.classList.add("hidden");
+          } else {
+            cidadeBtn.classList.remove("border-b-4", "border-yellow-500");
+            localBtn.classList.add("border-b-4", "border-yellow-500");
+      
+            cidadeContent.classList.add("hidden");
+            localContent.classList.remove("hidden");
+      
+            carousel.classList.add("hidden");
+            map.classList.remove("hidden");
+          }
+        }
+    </script>
+
+    <!-- Menu resposivo -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+    </script>
+
+        
+      
+</body>
+
+</html>
